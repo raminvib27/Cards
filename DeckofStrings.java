@@ -6,7 +6,7 @@ public class DeckofStrings
 {
     private String[] suits = {"Clubs", "Spades", "Hearts", "Diamonds"};
     private String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
-    private String[] cards = new String[52];
+    private String[] cards = new String[suits.length * values.length];
 
     public void generateStrings()
     {
