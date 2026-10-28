@@ -4,5 +4,18 @@
 
 public class Deck
 {
+    public Deck(String[] suits, String[] values)
+    {
 
+    }
+
+    public shuffle()
+    {
+
+    }
+
+    public deal()
+    {
+
+    }
 }

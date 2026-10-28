@@ -8,6 +8,13 @@ public class Card
     private char value;
     private int point;
 
+    public Card(String[] s, String[] v, String[] p)
+    {
+        suit = s;
+        value = v;
+        point = p;
+    }
+
     public String getSuit()
     {
         return suit;
