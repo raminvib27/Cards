@@ -4,9 +4,19 @@
 
 public class Deck
 {
-    public Deck(String[] suits, String[] values)
-    {
+    Card[] deckOfCards; // declare only at this point
 
+    public Deck(String[] suits, String[] values, String[] points)
+    {
+        deckOfCards = new Card[suits.length * values.length];
+
+        for (int i = 0; i < suits.length; i++)
+        {
+            for (int j = 0; j < values.length; j++)
+            {
+                deckOfCards[i] = new Card(suits[i], values[j], points[j]);
+            }
+        }
     }
 
     public shuffle()
