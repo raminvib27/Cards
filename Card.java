@@ -4,9 +4,9 @@
 
 public class Card
 {
-    private String suit;
-    private char value;
-    private int point;
+    private String suit; // hearts, diamonds, etc.
+    private char value;  // 2 - 10, J, Q, J, A
+    private int point;   // 1 - 14?
 
     public Card(String[] s, String[] v, String[] p)
     {
