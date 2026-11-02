@@ -16,9 +16,9 @@ public class DeckofStrings
 
         for (int i = 0; i < suits.length; i++)
         {
-            for (int yessir = 0; yessir < values.length; yessir++)
+            for (int j = 0; j < values.length; j++)
             {
-                cards[index] = values[yessir] + " of " + suits[i].charAt(0);
+                cards[index] = values[j] + " of " + suits[i].charAt(0);
                 index++;
             }
         }
