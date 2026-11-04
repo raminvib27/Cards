@@ -7,17 +7,22 @@ public class Deck
     private Card[] deckOfCards; // holds all the cards
     private int nextCard; // next card to deal
 
+    // length vars so doesn't recalculate length on each call
+    private int suitLen = suits.length;
+    private int valuesLen = values.length;
+    private int deckLen = deckOfCards.length;
+
     // make deck from suits, values, and points
     public Deck(String[] suits, String[] values, int[] points)
     {
-        deckOfCards = new Card[suits.length * values.length];
+        deckOfCards = new Card[suitLen * valuesLen];
         nextCard = 0;
         int index = 0;
 
         // make every suit and value combination
-        for (int i = 0; i < suits.length; i++)
+        for (int i = 0; i < suitLen; i++)
         {
-            for (int j = 0; j < values.length; j++)
+            for (int j = 0; j < valuesLen; j++)
             {
                 // points[j] goes with values[j]
                 deckOfCards[index] = new Card(suits[i], values[j], points[j]);
@@ -49,7 +54,7 @@ public class Deck
     public Card[] deal(int amount)
     {
         // return null if there are not enough cards b/c that's what competent coders do apparently
-        if (amount < 0 || amount > deckOfCards.length - nextCard)
+        if (amount < 0 || amount > deckLen - nextCard)
         {
             return null;
         }
@@ -68,7 +73,7 @@ public class Deck
     // deal one card
     public Card dealCard()
     {
-        if (nextCard < deckOfCards.length)
+        if (nextCard < deckLen)
         {
             Card card = deckOfCards[nextCard];
             nextCard++;
