@@ -5,28 +5,38 @@
 public class Card
 {
     private String suit; // hearts, diamonds, etc.
-    private char value;  // 2 - 10, J, Q, J, A
-    private int point;   // 1 - 14?
+    private String value; // 2 - 10, J, Q, K, A
+    private int point; // points for card
 
-    public Card(String[] s, String[] v, String[] p)
+    // make one card
+    public Card(String s, String v, int p)
     {
         suit = s;
         value = v;
         point = p;
     }
 
+    // get suit
     public String getSuit()
     {
         return suit;
     }
 
-    public char getValue()
+    // get value
+    public String getValue()
     {
         return value;
     }
 
+    // get points
     public int getPoint()
     {
         return point;
+    }
+
+    // change points
+    public void setPoint(int p)
+    {
+        point = p;
     }
 }
