@@ -8,9 +8,11 @@ public class Tester
     // make DeckofStrings instance, generate and print array
     public static void main(String[] args)
     {
-        DeckofStrings deck = new DeckofStrings();
+        // DeckofStrings deck = new DeckofStrings();
 
-        deck.generateStrings();
-        deck.printArray();
+        // deck.generateStrings();
+        // deck.printArray();
+
+        Blackjack game = new Blackjack(1);
     }
 }

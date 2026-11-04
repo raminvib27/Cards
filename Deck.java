@@ -37,6 +37,22 @@ public class Deck
         return deckOfCards;
     }
 
+    // get individual card details
+    public String getSuit(int index)
+    {
+        return deckOfCards[index].getSuit();
+    }
+
+    public String getPoint(int index)
+    {
+        return deckOfCards[index].getPoint();
+    }
+
+    public String getValue(int index)
+    {
+        return deckOfCards[index].getValue();
+    }
+
     // change deck array
     public void setDeckOfCards(Card[] cards)
     {
@@ -44,7 +60,7 @@ public class Deck
         nextCard = 0;
     }
 
-    // shuffly sometime soon????? idk
+    // shuffle sometime soon????? idk
     public void shuffle()
     {
 

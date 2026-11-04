@@ -39,4 +39,9 @@ public class Card
     {
         point = p;
     }
+
+    public String toString()
+    {
+        return "A" + value;
+    }
 }
